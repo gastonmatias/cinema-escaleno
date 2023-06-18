@@ -51,8 +51,6 @@ const MediaTypeItemPage:NextPage = () => {
                         </Typography>
                     </Grid>
 
-                    {/* <Grid item height='50vh'width='50vw'> */}
-                    {/* <Grid item height='90vh'width='50vw'xs={10} > */}
                     <Grid item xs={10} >
                         <MediaTypeItemCard data={data} isMovie={isMovie}/>
                     </Grid>

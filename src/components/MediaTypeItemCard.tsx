@@ -16,9 +16,6 @@ interface Props{
 
 const cardClasses ={
     height: '100%',
-    // height: '100vh',
-    // width:  '50vw',
-    // width: '100%',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -68,7 +65,6 @@ export const MediaTypeItemCard:FC<Props> = ({data,isMovie}) => {
         <Grid item xs={12} sm={5} display='flex'>
           <Paper  sx={{p:3, display:'flex', flexDirection:'column'}}>
               <Typography variant="h4" color='secondary'>
-                {/* { data.tagline ? <em>"{data.tagline}"</em> : null} */}
                 { data.tagline ? <em>&quot;{data.tagline}&quot;</em> : null}
               </Typography>
               

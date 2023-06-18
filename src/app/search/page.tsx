@@ -1,7 +1,7 @@
 "use client"
 import { useState, ChangeEvent, KeyboardEvent, MouseEvent } from "react"
 import { NextPage } from "next"
-import { Button, Container, Grid, Paper, TextField, Typography } from "@mui/material"
+import { Button, Container, Grid,TextField, Typography } from "@mui/material"
 import { useQuery } from "@tanstack/react-query"
 
 import { ISearchItem } from "@/interfaces/searchMulti"
@@ -58,7 +58,6 @@ const SearchPage:NextPage = () => {
                     fullWidth id="filterBy" 
                     label="Filter by name" 
                     variant="outlined" 
-                    // placeholder="lord of the rings"
                     value={querySearch}
                     onChange= {(e:any)=>handleInputChange(e)}
                     onKeyDown={(e:any)=>handleKeyPress(e)}
@@ -70,7 +69,6 @@ const SearchPage:NextPage = () => {
                     fullWidth 
                     variant="contained" 
                     color="primary"
-                    // disabled={isLoading}
                     disabled={querySearch===''}
                     onClick={(e:any) => handleSearch(e)}
                     >
@@ -99,17 +97,13 @@ const SearchPage:NextPage = () => {
         <>
         <Grid container 
         gap={2} 
-        // justifyContent='center' 
         justifyContent='space-around' 
         bgcolor={'#121212'}
         p={1}
         marginTop={3}
         marginBottom={3}
         >
- 
-            {/* <Grid item xs={12}  justifyContent='center'sx={{display: 'flex'}} >
-              <Paginator count={dataSearch.total_pages} setPage={setPage} page={page} refetch={refetch}/>
-            </Grid> */}
+
           {
             dataSearch?.results?.map((e: ISearchItem) => (
 

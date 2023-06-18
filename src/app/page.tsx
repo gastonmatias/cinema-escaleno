@@ -11,12 +11,12 @@ import { SpinnerCircle } from '@/components/UI';
 
 const HomePage:NextPage= () => {
 
-  const { isLoading:isLoadingMovies, error: errorMovies, data:dataMovies } = useQuery({
+  const { isLoading:isLoadingMovies, data:dataMovies } = useQuery({
     queryKey: ['repoDataMovies'],
     queryFn: () => getTrendingMovies()
   })
 
-  const { isLoading:isLoadingSeries, error: errorSeries, data:dataSeries } = useQuery({
+  const { isLoading:isLoadingSeries, data:dataSeries } = useQuery({
     queryKey: ['repoDataSeries'],
     queryFn: () => getTrendingSeries()
   })

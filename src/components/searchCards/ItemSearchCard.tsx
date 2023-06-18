@@ -1,6 +1,5 @@
 import { FC } from "react"
 
-import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -27,9 +26,9 @@ export const ItemSearchCard:FC<Props> = ({item}) => {
         : type === SearchMediaType.Person
         ? alert('Oops! Page Actors in Progress, try movie or tv serie instead')
         :null
-      // TODO: page people, x mientras redirige a 404 
-      // : type === SearchMediaType.Person
-      //   ? router.push(`/people/${item.id}`) : null
+      // TODO: page people, x mientras salta un alert 
+      // TODO: : type === SearchMediaType.Person
+      // TODO :  ? router.push(`/people/${item.id}`) : null
   }
 
   return (

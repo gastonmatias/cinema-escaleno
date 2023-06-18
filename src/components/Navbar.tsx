@@ -116,7 +116,6 @@ export const Navbar = () => {
           <Box sx={{ flexGrow: 0, display:'flex'}}>
               <Button
                 onClick={() => router.push(`/search`)}
-                // sx={{ my: 2, color: 'white', display: 'flex' }}
                 sx={{ my: 2, display: 'flex' }}
                 variant="outlined"
               >

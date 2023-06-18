@@ -27,6 +27,7 @@ export const Navbar = () => {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+    alert('Oops! section in progress, try cinema or search ;)')
   };
 
   const router = useRouter()

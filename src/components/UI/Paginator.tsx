@@ -1,8 +1,7 @@
 import * as React from 'react';
-import Typography from '@mui/material/Typography';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 
 interface Props{
     count: number;
@@ -15,15 +14,13 @@ interface Props{
 export const Paginator:FC<Props> = ({count, setPage, page,refetch}) => {
 
   const handleChange = async (event: React.ChangeEvent<unknown>, value: number) => {
-        await setPage(value)
-        await refetch()
-  };
+      await setPage(value)
+      await refetch()
+  }
 
   return (
     <>
-    {/* <Stack spacing={2} mt={5} sx={{display:'flex', flexDirection:'column'}}> */}
     <Stack spacing={2} mt={5} >
-    {/* <Stack spacing={2} mt={5} sx={{display:'flex', flex:'1'}}> */}
       <Pagination
         count={count} 
         page={page} 

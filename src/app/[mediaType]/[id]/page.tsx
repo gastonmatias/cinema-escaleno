@@ -32,6 +32,8 @@ const MediaTypeItemPage:NextPage = () => {
             <Grid container
                 direction="row"
                 alignItems="center"
+                justifyContent="center"
+                height='50vh'
              >
 
                 { isLoading || isRefetching 
@@ -43,13 +45,17 @@ const MediaTypeItemPage:NextPage = () => {
                     !isLoading && !isRefetching
                     ? 
                     <>
-                    <Grid item>
+                    <Grid item xs={12}>
                         <Typography variant="h3" color="primary">
                             {isMovie? data.title: data.name}
                         </Typography>
                     </Grid>
 
-                    <MediaTypeItemCard data={data} isMovie={isMovie}/>
+                    {/* <Grid item height='50vh'width='50vw'> */}
+                    {/* <Grid item height='90vh'width='50vw'xs={10} > */}
+                    <Grid item xs={10} >
+                        <MediaTypeItemCard data={data} isMovie={isMovie}/>
+                    </Grid>
                     </>
                     :null
                 }

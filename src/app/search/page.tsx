@@ -79,11 +79,11 @@ const SearchPage:NextPage = () => {
             </Grid>
 
             {
-              dataSearch?.results.length>0 && isSearchExecuted
+              dataSearch?.results.length>0 
               ?
-                <Grid item xs={12} justifyContent="center" alignItems="center"  sx={{border:'1px black'}}>
-                  <Paginator count={dataSearch.total_pages} setPage={setPage} page={page} refetch={refetch}/>
-                </Grid>
+              <Grid item xs={12}  justifyContent='center'sx={{display: 'flex'}} >
+                <Paginator count={dataSearch.total_pages} setPage={setPage} page={page} refetch={refetch}/>
+              </Grid>
               : null
             }
         </Grid>
@@ -102,11 +102,14 @@ const SearchPage:NextPage = () => {
         // justifyContent='center' 
         justifyContent='space-around' 
         bgcolor={'#121212'}
-        p={0}
-        marginTop={5}
+        p={1}
+        marginTop={3}
+        marginBottom={3}
         >
  
-
+            {/* <Grid item xs={12}  justifyContent='center'sx={{display: 'flex'}} >
+              <Paginator count={dataSearch.total_pages} setPage={setPage} page={page} refetch={refetch}/>
+            </Grid> */}
           {
             dataSearch?.results?.map((e: ISearchItem) => (
 

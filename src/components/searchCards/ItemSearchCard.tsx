@@ -24,7 +24,9 @@ export const ItemSearchCard:FC<Props> = ({item}) => {
       ? router.push(`/movies/${item.id}`)
     : type === SearchMediaType.Tv
         ? router.push(`/series/${item.id}`)
-        : router.push('/404') 
+        : type === SearchMediaType.Person
+        ? alert('Oops! Page Actors in Progress, try movie or tv serie instead')
+        :null
       // TODO: page people, x mientras redirige a 404 
       // : type === SearchMediaType.Person
       //   ? router.push(`/people/${item.id}`) : null

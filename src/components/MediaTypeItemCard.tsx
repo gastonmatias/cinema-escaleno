@@ -16,7 +16,9 @@ interface Props{
 
 const cardClasses ={
     height: '100%',
-    width: '100%',
+    // height: '100vh',
+    // width:  '50vw',
+    // width: '100%',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -55,7 +57,7 @@ export const MediaTypeItemCard:FC<Props> = ({data,isMovie}) => {
             <Typography variant="body2" color="text.secondary">
               <span style={{display:'flex', alignItems:'end', justifyContent:'center'}}>
                 { isMovie? data.release_date : data.first_air_date} 
-                <CalendarMonthOutlinedIcon  sx={{fontSize: 'normal' }}/>
+                <CalendarMonthOutlinedIcon  sx={{fontSize: 'normal', marginLeft:1 }}/>
               </span>
             </Typography>
             </CardContent>
@@ -67,7 +69,7 @@ export const MediaTypeItemCard:FC<Props> = ({data,isMovie}) => {
           <Paper  sx={{p:3, display:'flex', flexDirection:'column'}}>
               <Typography variant="h4" color='secondary'>
                 {/* { data.tagline ? <em>"{data.tagline}"</em> : null} */}
-                { data.tagline ? <em>&quot;{data.tagline}&quot;</em> : null}
+                { data.tagline ? <em>"{data.tagline}"</em> : null}
               </Typography>
               
               <Typography variant="body1" sx={{ mt: 2 }}>

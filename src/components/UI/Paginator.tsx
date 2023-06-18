@@ -17,8 +17,6 @@ export const Paginator:FC<Props> = ({count, setPage, page,refetch}) => {
   const handleChange = async (event: React.ChangeEvent<unknown>, value: number) => {
         await setPage(value)
         await refetch()
-        console.log({page});
-        console.log({value});
   };
 
   return (

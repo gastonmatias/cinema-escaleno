@@ -13,8 +13,6 @@ import { SpinnerCircle } from "@/components/UI"
 
 const SearchPage:NextPage = () => {
 
-  // const router = useRouter()
-    
   const [querySearch, setQuerySearch] = useState('');
   const [isSearchExecuted, setIsSearchExecuted] = useState(false);
   const [page, setPage] = useState(1);
@@ -24,20 +22,11 @@ const SearchPage:NextPage = () => {
     enabled: false, // disable this query from automatically running
     queryKey:['repoDataSearch'],
     queryFn: () => getSearchMulti(querySearch, page),
-    // refetchOnWindowFocus: false,
-    // refetchOnMount: 'always'
   }) //! END REACT QUERY SEARCH MULTI ----------------------------------------------
-
-
-  // console.log(dataSearch);
-  console.log({isFetching});
-  console.log({isRefetching});
-  console.log({isLoading});
 
   // ! EXEC BUSQUEDA 
   const handleSearch = async (e: MouseEvent<HTMLButtonElement> | KeyboardEvent<HTMLInputElement>) => {
     e.preventDefault()
-    // router.push(`/search?query=${querySearch}`)
     setIsSearchExecuted(true)
     await refetch()
   } //! END exec busqueda
@@ -99,8 +88,6 @@ const SearchPage:NextPage = () => {
             }
         </Grid>
 
-
-      {/* { isLoading && isSearchExecuted */}
       { isLoading && isRefetching || isFetching
         ? <SpinnerCircle isLoading={isLoading} height={"70vh"} width={"70vw"}/> 
         : null 
@@ -110,7 +97,6 @@ const SearchPage:NextPage = () => {
         !isLoading && !isFetching
         ?
         <>
-        {/* <Paginator querySearch={querySearch} count={dataSearch.total_pages} setPage={setPage} page={page} refetch={refetch}/> */}
         <Grid container 
         gap={2} 
         // justifyContent='center' 

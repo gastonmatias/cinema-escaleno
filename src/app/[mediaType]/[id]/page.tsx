@@ -26,9 +26,6 @@ const MediaTypeItemPage:NextPage = () => {
         refetchOnMount: 'always'
     })
 
-    console.log(data);
-
-  
     return (
         <Layout title={isMovie? 'movie detail':'serie detail'} >
 

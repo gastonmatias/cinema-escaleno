@@ -1,7 +1,6 @@
 'use client'
 
 import { Layout } from '@/components/Layout'
-import { TrendingMovies } from '../components/TrendingMovies';
 import { getTrendingMovies, getTrendingSeries } from '@/services';
 
 import {  NextPage } from 'next'

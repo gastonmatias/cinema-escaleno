@@ -69,7 +69,7 @@ export const MediaTypeItemCard:FC<Props> = ({data,isMovie}) => {
           <Paper  sx={{p:3, display:'flex', flexDirection:'column'}}>
               <Typography variant="h4" color='secondary'>
                 {/* { data.tagline ? <em>"{data.tagline}"</em> : null} */}
-                { data.tagline ? <em>"{data.tagline}"</em> : null}
+                { data.tagline ? <em>&quot;{data.tagline}&quot;</em> : null}
               </Typography>
               
               <Typography variant="body1" sx={{ mt: 2 }}>

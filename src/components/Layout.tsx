@@ -6,6 +6,7 @@ import { Navbar } from "./Navbar"
 import { ReactNode } from "react";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { darkTheme } from "@/themes/darkTheme";
+import { synthwaveTheme } from "@/themes/synthwaveTheme";
 
 interface Props{
     title: string;
@@ -23,7 +24,8 @@ export const Layout = ({ title, children }:Props) => {
         <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <ThemeProvider theme={darkTheme}>
+    {/* <ThemeProvider theme={darkTheme}> */}
+    <ThemeProvider theme={synthwaveTheme}>
         <CssBaseline/>
         <Navbar/>
 

@@ -16,24 +16,25 @@ import SearchIcon from '@mui/icons-material/Search';
 import LocalMoviesIcon from '@mui/icons-material/LocalMovies';
 import { useState } from 'react';
 
-const pages = ['Movies', 'Series', 'About'];
+// const pages = ['Movies', 'Series', 'About'];
+const pages = ['Movies', 'Series'];
 
 export const Navbar = () => {
   const [anchorElNav, setAnchorElNav] =   useState<null | HTMLElement>(null);
+  
+  const router = useRouter()
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-    alert('Oops! section in progress, try cinema or search ;)')
-  };
+  const handleCloseNavMenu = () => setAnchorElNav(null);
 
-  const router = useRouter()
+  const handleClickNavPage = (page:string) => router.push(`/${page}?page=1`)
+
 
   return (
-    <AppBar position="fixed" elevation={0}>
+    <AppBar position="fixed" elevation={0} style={{backgroundColor:'#0E0920'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           
@@ -86,7 +87,6 @@ export const Navbar = () => {
             href="/"
             sx={{
               mr: 2,
-            //   display: { xs: 'flex', md: 'none' },
               display: { xs: 'flex' },
               flexGrow: 1,
               fontFamily: 'monospace',
@@ -96,7 +96,7 @@ export const Navbar = () => {
               textDecoration: 'none',
             }}
           >
-            Cinema
+            ScreenPedia
           </Typography>
           {/*//! END LOGO ---------------  */}
           
@@ -105,7 +105,7 @@ export const Navbar = () => {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => handleClickNavPage(page)}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}

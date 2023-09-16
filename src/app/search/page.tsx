@@ -76,14 +76,14 @@ const SearchPage:NextPage = () => {
                 </Button>
             </Grid>
 
-            {
+            {/* {
               dataSearch?.results.length>0 
               ?
               <Grid item xs={12}  justifyContent='center'sx={{display: 'flex'}} >
                 <Paginator count={dataSearch.total_pages} setPage={setPage} page={page} refetch={refetch}/>
               </Grid>
               : null
-            }
+            } */}
         </Grid>
 
       { isLoading && isRefetching || isFetching
@@ -101,7 +101,7 @@ const SearchPage:NextPage = () => {
         bgcolor={'#121212'}
         p={1}
         marginTop={3}
-        marginBottom={3}
+        marginBottom={1}
         >
 
           {
@@ -130,6 +130,15 @@ const SearchPage:NextPage = () => {
             </Typography>
           : null
       }
+
+    {
+      dataSearch?.results.length>0 
+      ?
+      <Grid item xs={12}  justifyContent='center'sx={{display: 'flex', paddingBottom:'1rem'}} >
+        <Paginator count={dataSearch.total_pages} setPage={setPage} page={page} refetch={refetch}/>
+      </Grid>
+      : null
+    }      
 
       </Container>
     </Layout>

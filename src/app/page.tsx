@@ -28,6 +28,8 @@ const HomePage:NextPage= () => {
       
       <Typography variant="h2" color="primary" >Movies</Typography>
     
+      {/* <SpinnerCircle isLoading={true} height={'50vh'} width={'90vw'}/> */}
+      
       {
         isLoadingMovies
         ? <SpinnerCircle isLoading={isLoadingMovies} height={'50vh'} width={'70vw'}/>
@@ -35,6 +37,8 @@ const HomePage:NextPage= () => {
       }
       
       <Typography variant="h2" color="primary">Series</Typography>
+       {/* <SpinnerCircle isLoading={true} height={'50vh'} width={'90vw'}/> */}
+      
       {
         isLoadingSeries
         ? <SpinnerCircle isLoading={isLoadingSeries} height={'50vh'} width={'70vw'}/>

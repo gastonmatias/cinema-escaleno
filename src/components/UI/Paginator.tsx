@@ -20,7 +20,7 @@ export const Paginator:FC<Props> = ({count, setPage, page,refetch}) => {
 
   return (
     <>
-    <Stack spacing={2} mt={5} >
+    <Stack spacing={2} mt={2} >
       <Pagination
         count={count} 
         page={page} 
